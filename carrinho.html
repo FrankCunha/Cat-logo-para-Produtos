@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            background-color: burlywood;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: bisque;
+        }
+
+
+body {
+  background: #fff6ef;;
+  font-family: barrio;
+
+  > header {
+    background: burlywood;
+    color: white;
+    font-size: 24px;
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: center;
+  }
+  > main {
+    background: #fff;
+    padding: 0 30px 30px;
+
+    .page-title {
+      font-size: 40px;
+      padding: 50px 0;
+      text-align: center;
+    }
+    .content {
+      display: flex;
+
+      section {
+        flex: 1;
+      }
+      aside {
+        min-width: 250px;
+      }
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+  font-family: barrio;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      border-bottom: 3px solid #eee;
+      th {
+        text-align: left;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        color: #666;
+      }
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 3px solid #eee;
+
+      &:last-child {
+        border: 0;
+      }
+
+      td {
+        padding: 30px 0;
+      }
+    }
+  }
+}
+
+.product {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 20%;
+    border-radius: 6px;
+  }
+
+  .info {
+    margin-left: 20px;
+    .name {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .category {
+      color: #666;
+    }
+  }
+}
+.qty {
+  background: #eee;
+  display: inline-flex;
+  padding: 0 0;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 30px;
+
+  span {
+    margin: 0 10px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    padding: 0 10px;
+    font-size: 20px;
+    height: 100%;
+
+    &:hover {
+      background: #ddd;
+    }
+  }
+}
+.remove {
+  background: #eee;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+aside {
+  margin-left: 30px;
+
+  .box {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    background: #eee;
+    color: #222;
+
+    header {
+      padding: 15px 20px;
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+    }
+    .info {
+      padding: 20px;
+      font-size: 16px;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        color: #555;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+      button {
+        border-radius: 5px;
+        color: burlywood;
+        background: transparent;
+        border: 0;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+
+  
+    footer {
+      padding: 15px 20px;
+      background: #ddd;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  > button {
+    border-radius: 5px;
+    border: 0;
+    padding: 15px 0;
+    color: white;
+    background: burlywood;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+
+    &:hover {
+      background: bisque;
+    }
+  }
+}
+  </style>
+  <body>
+    <header>
+      <span>Carrinho de compras<b></b></span>
+    </header>
+    <main>
+      <div class="page-title">Seu Carrinho</div>
+      <div class="content">
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th>-</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="product">
+                    <img src="img/SFrancisco.1.png" alt="" />
+                    <div class="info">
+                      <div class="name">São Francisco de Assis</div>
+                      <div class="category">Imagens</div>
+                    </div>
+                  </div>
+                </td>
+                <td>R$ 143,99</td>
+                <td>
+                  <div class="qty">
+                    <button><i class="bx bx-minus"></i></button>
+                    <span>1</span>
+                    <button><i class="bx bx-plus"></i></button>
+                  </div>
+                </td>
+                <td>R$ 143,99</td>
+                <td>
+                  <button class="remove"><i class="bx bx-x"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product">
+                    <img src="img/Art5.1.png" alt="" />
+                    <div class="info">
+                      <div class="name">Porta terço</div>
+                      <div class="category">Itens Religiosos</div>
+                    </div>
+                  </div>
+                </td>
+                <td>R$ 7,89</td>
+                <td>
+                  <div class="qty">
+                    <button><i class="bx bx-minus"></i></button>
+                    <span>2</span>
+                    <button><i class="bx bx-plus"></i></button>
+                  </div>
+                </td>
+                <td>R$ 15,78</td>
+                <td>
+                  <button class="remove"><i class="bx bx-x"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product">
+                    <img src="img/C1.1.png" alt="" />
+                    <div class="info">
+                      <div class="name">Camisa de São Francisco</div>
+                      <div class="category">Camisa, Masculina - M</div>
+                    </div>
+                  </div>
+                </td>
+                <td>R$ 34,50</td>
+                <td>
+                  <div class="qty">
+                    <button><i class="bx bx-minus"></i></button>
+                    <span>1</span>
+                    <button><i class="bx bx-plus"></i></button>
+                  </div>
+                </td>
+                <td>R$ 34,50</td>
+                <td>
+                  <button class="remove"><i class="bx bx-x"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <aside>
+          <div class="box">
+            <header>Resumo da compra</header>
+            <div class="info">
+              <div><span>Sub-total</span><span>R$ 194,27</span></div>
+              <div><span>Frete</span><span>Gratuito</span></div>
+              <div>
+                <button>
+                  Adicionar cupom de desconto
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </div>
+            </div>
+            <footer>
+              <span>Total</span>
+              <span>R$ 194,27</span>
+            </footer>
+          </div>
+          <button>Finalizar Compra</button>
+        </aside>
+      </div>
+    </main>
+    <div class="container">
+        <a href="Produtos.html" class="back-button">Voltar para Compras</a>
+    </div>
+  </body>
+</html>
