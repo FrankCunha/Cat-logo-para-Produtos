@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="stylelogin.css" />
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><h2>Lírio do Senhor</h2></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="usuario.html">
+                            <i class="fa fa-user fa-lg"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrinho.html">
+                            <i class="fa fa-shopping-cart fa-lg"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container">
+    <div class="content first-content">
+        <div class="first-column">
+            <h2 class="title title-primary">Faça seu login!</h2>
+            <p class="description description-primary">Para se manter conectado conosco e receber ofertas imperdiveis</p>
+            <p class="description description-primary">Por favor faça login com suas informações pessoais</p>
+            <button id="signin" class="btn btn-primary">sign in</button>
+        </div>    
+        <div class="second-column">
+            <h2 class="title title-second">Faça login no desenvolvedor</h2>
+            <div class="social-media">
+                <ul class="list-social-media">
+                    <a class="link-social-media" href="#">
+                        <li class="item-social-media">
+                            <i class="fab fa-facebook-f"></i>        
+                        </li>
+                    </a>
+                    <a class="link-social-media" href="#">
+                        <li class="item-social-media">
+                            <i class="fab fa-google-plus-g"></i>
+                        </li>
+                    </a>
+                    <a class="link-social-media" href="#">
+                        <li class="item-social-media">
+                            <i class="fab fa-linkedin-in"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <p class="description description-second">ou use seu e-mail para inscrição:</p>
+            <form class="form">
+                <label class="label-input" for="">
+                    <i class="far fa-user icon-modify"></i>
+                    <input type="text" placeholder="Name">
+                </label>
+                
+                <label class="label-input" for="">
+                    <i class="far fa-envelope icon-modify"></i>
+                    <input type="email" placeholder="Email">
+                </label>
+                
+                <label class="label-input" for="">
+                    <i class="fas fa-lock icon-modify"></i>
+                    <input type="password" placeholder="Password">
+                </label>
+                
+                
+                <button class="btn btn-second">sign up</button>        
+            </form>
+        </div>
+    </div>
+    <div class="content second-content">
+        <div class="first-column">
+            <h2 class="title title-primary">Olá amig@!</h2>
+            <p class="description description-primary">Entre com seus dados pessoais</p>
+            <p class="description description-primary">Comece a jornada conosco</p>
+            <button id="signup" class="btn btn-primary">sign up</button>
+        </div>
+        <div class="second-column">
+            <h2 class="title title-second">Faça login no desenvolvedor</h2>
+            <div class="social-media">
+                <ul class="list-social-media">
+                    <a class="link-social-media" href="#">
+                        <li class="item-social-media">
+                            <i class="fab fa-facebook-f"></i>
+                        </li>
+                    </a>
+                    <a class="link-social-media" href="#">
+                        <li class="item-social-media">
+                            <i class="fab fa-google-plus-g"></i>
+                        </li>
+                    </a>
+                    <a class="link-social-media" href="#">
+                        <li class="item-social-media">
+                            <i class="fab fa-linkedin-in"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <p class="description description-second">ou use sua conta de e-mail:</p>
+            <form class="form">
+            
+                <label class="label-input" for="">
+                    <i class="far fa-envelope icon-modify"></i>
+                    <input type="email" placeholder="Email">
+                </label>
+            
+                <label class="label-input" for="">
+                    <i class="fas fa-lock icon-modify"></i>
+                    <input type="password" placeholder="Password">
+                </label>
+            
+                <a class="password" href="#">Esqueceu sua senha?</a>
+                <button class="btn btn-second">sign up</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>

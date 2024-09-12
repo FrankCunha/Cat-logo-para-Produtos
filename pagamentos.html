@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pagamento</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="valor-total" class="container">
+        </div>
+        <form id="forma-pagamento" class="container">
+            <h3>Forma de Pagamento</h3>
+                <label>
+                    <input type="radio" name="pagamento" value="cartao" checked>
+                    Cartão de Crédito
+                </label><br>
+                <label>
+                    <input type="radio" name="pagamento" value="boleto">
+                    Boleto Bancário
+                </label><br>
+                <label>
+                    <input type="radio" name="pagamento" value="pix">
+                    Pix
+                </label><br><br>
+                <button type="submit">Confirmar Pagamento</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

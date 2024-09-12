@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.btn-primary:hover {
+    background-color: burlywood;
+}
+
+#produto-detalhes {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#add-to-cart {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#avaliacoes {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.comentario {
+    margin-bottom: 20px;
+}
+
+.comentario p {
+    margin: 0;
+}
+
+.estrelas {
+    color: #f39c12;
+}
+
+#form-avaliacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#form-avaliacao input, 
+#form-avaliacao select, 
+#form-avaliacao textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+</style>
+<body>
+    <header>
+        <h1>Detalhes do Produto</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="produto-detalhes" class="container">
+            
+        </div>
+        <button id="add-to-cart" class="btn btn-primary">Adicionar ao Carrinho</button>
+
+        <section id="avaliacoes">
+            <div class="comentario">
+                <p><strong>Maria Silva</strong></p>
+                <div class="estrelas">
+                    ★★★★☆ 
+                </div>
+                <p>"Produto excelente, superou minhas expectativas! A qualidade é muito boa e chegou no prazo."</p>
+            </div>
+            
+            <div class="comentario">
+                <p><strong>João Pereira</strong></p>
+                <div class="estrelas">
+                    ★★★☆☆ >
+                </div>
+                <p>"O produto é bom, mas achei o acabamento um pouco inferior ao que esperava."</p>
+            </div>
+            
+            <div class="comentario">
+                <p><strong>Ana Costa</strong></p>
+                <div class="estrelas">
+                    ★★★★★ 
+                </div>
+                <p>"Simplesmente perfeito! Comprarei mais produtos dessa loja."</p>
+            </div>
+
+            <h3>Deixe sua Avaliação</h3>
+            <form id="form-avaliacao">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="estrelas">Avaliação:</label>
+                <select id="estrelas" name="estrelas" required>
+                    <option value="1">1 Estrela</option>
+                    <option value="2">2 Estrelas</option>
+                    <option value="3">3 Estrelas</option>
+                    <option value="4">4 Estrelas</option>
+                    <option value="5">5 Estrelas</option>
+                </select>
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
